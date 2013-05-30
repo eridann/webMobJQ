@@ -1,4 +1,56 @@
 #drawZone{
-border: solid 1px #000000;
+    border: solid 1px #000000;
     box-shadow: 0 0 20px rgba(0,0,0,255);
+}
+
+#dayMeteo{
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    box-shadow: 0 0 10px black;
+}
+
+#weekMeteo{
+    margin-top: 40px;
+    overflow: visible;
+
+}
+
+#dayMeteo >img{
+    width: 60%;
+}
+
+
+#weekMeteo img{
+    transition-duration :0.3s;
+    transition-property :all;
+    transition-timing-function : linear;
+
+}
+
+#weekMeteo img:hover{
+    -webkit-transform: scale(1.5);
+}
+
+@-webkit-keyframes monAnim1 {
+    0%{
+        color: blue;
+        border-radius: 4px;
+    }
+    33% {
+        color: red;
+    }
+    66%{
+       font-size: 40px ;
+    }
+    100%{
+        border-radius: 0;
+        color: purple;
+
+    }
+
+}
+h1{
+    -webkit-animation : monAnim1 1s linear;
+    -webkit-animation-iteration-count : 1;
 }

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" manifest="manifest.appcache">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
     <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/animate-boucing.css"/>
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>>
+    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 
     <title>App Mobile jQuery Mobile</title>
 </head>
@@ -62,15 +63,40 @@
         <h1>Orientation</h1>
     </header>
     <section data-role="content">
-        <img  src="img/img.jpg" alt="SNCF" title="SNCF"/>
+        <img class="imgContainer" src="img/twd.jpg.jpg" alt="SNCF" title="SNCF"/>
     </section>
     <footer data-role="footer" data-position="fixed">
         <nav data-role="navbar">
             <ul>
-                <li><a href="#home" data-icon="home" data-transition="slide" class="ui-btn-active ui-state-persist" >Home</a></li>
+                <li><a href="#home" data-icon="home" data-transition="slide" >Home</a></li>
+                <li><a href="#canvas" data-icon="gear" data-transition="slide">Draw it!</a></li>
+                <li><a href="#orientation" data-icon="star" data-transition="slide" class="ui-btn-active ui-state-persist">Orientation !</a></li>
+                <li><a href="#meteo" data-icon="list" data-transition="slide" >Meteo</a></li>
+            </ul>
+        </nav>
+
+    </footer>
+
+</div>
+<div data-role="page" id="meteo" data-position="fixed">
+    <header data-role="header">
+        <h1>Meteo</h1>
+    </header>
+    <section data-role="content">
+      <section id="dayMeteo">
+
+      </section>
+        <section id="weekMeteo" class="ui-grid-b">
+
+        </section>
+    </section>
+    <footer data-role="footer" data-position="fixed">
+        <nav data-role="navbar">
+            <ul>
+                <li><a href="#home" data-icon="home" data-transition="slide" >Home</a></li>
                 <li><a href="#canvas" data-icon="gear" data-transition="slide">Draw it!</a></li>
                 <li><a href="#orientation" data-icon="star" data-transition="slide">Orientation !</a></li>
-                <li><a href="#meteo" data-icon="list" data-transition="slide">Meteo</a></li>
+                <li><a href="#meteo" data-icon="list" data-transition="slide" class="ui-btn-active ui-state-persist">Meteo</a></li>
             </ul>
         </nav>
 
